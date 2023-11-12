@@ -47,6 +47,7 @@
 
 .header__address {
     justify-self: end;
+    white-space: nowrap;
 }
 
 .address {
@@ -174,8 +175,7 @@
     gap: 25px;
     list-style: none;
     margin-bottom: 30px;
-
-
+    width: 100%;
 }
 
 .lots__card-list-item {
@@ -212,6 +212,7 @@
     line-height: 120%;
     text-decoration-line: underline;
     text-transform: uppercase;
+    text-underline-offset: 3px;
 }
 
 .card__text {
@@ -345,5 +346,5 @@
     display: block;
     width: 48px;
     height: 48px;
-    
+
 }
