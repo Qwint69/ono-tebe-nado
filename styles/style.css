@@ -21,7 +21,7 @@
 
 .header__links-list-item {
     color: #000;
-    font-family: Raleway;
+    font-family: Raleway, sans-serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 24.3px;
@@ -33,6 +33,11 @@
     text-underline-offset: 4px;
 }
 
+.header__link_active {
+    pointer-events: none;
+    text-decoration: none;
+}
+
 .header__links-list-item_no-bullit {
     list-style: none;
 }
@@ -42,12 +47,17 @@
     justify-self: center;
     width: 148px;
     height: 105px;
+    padding-bottom: 4px;
+}
 
+.header__logo-image {
+    object-fit: contain;
+    max-height: 100%;
 }
 
 .header__address {
     justify-self: end;
-    white-space: nowrap;
+    max-width: 240px;
 }
 
 .address {
@@ -143,7 +153,7 @@
     height: 52px;
     border: 1px solid #FFF;
     color: #FFF;
-    font-family: Raleway;
+    font-family: Raleway, sans-serif;
     text-align: center;
     font-size: 22px;
     font-style: normal;
@@ -170,6 +180,7 @@
 
 .lots__card-list {
     display: flex;
+    flex-wrap: wrap;
     gap: 25px;
     list-style: none;
     margin-bottom: 30px;
@@ -203,7 +214,7 @@
 
 .card__title {
     color: #FFF;
-    font-family: Raleway;
+    font-family: Raleway, sans-serif;
     font-size: 22px;
     font-style: normal;
     font-weight: 700;
@@ -223,25 +234,27 @@
 
 }
 
-.card_type_film {
-    background-image: url("../images/card-lot-01.jpg");
+.card_type_film,
+.card_type_book,
+.card_type_picture {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+
+.card_type_film {
+    background-image: url("../images/card-lot-01.jpg");
+
 }
 
 .card_type_book {
     background-image: url("../images/card-lot-02.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+
 }
 
 .card_type_picture {
     background-image: url("../images/card-lot-03.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+
 }
 
 .lots__look-more-link {
@@ -258,7 +271,7 @@
     grid-template-columns: min-content 1fr;
     column-gap: 25px;
     padding: 181px 50px 180px 50px;
-   
+
 }
 
 .about__logo {
@@ -271,7 +284,7 @@
     margin-right: 95px;
     margin-left: 95px;
     margin-bottom: 0px;
-    
+
 }
 
 .about__logo-image {
@@ -279,7 +292,7 @@
     height: 114px;
     margin: auto;
     object-fit: contain;
-    
+
 }
 
 
@@ -293,6 +306,12 @@
     margin-bottom: 100px;
 }
 
+.about__text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
 .about__text {
     font-size: 20px;
     font-style: normal;
@@ -300,14 +319,15 @@
     line-height: normal;
 }
 
-.about__text-first {
-    margin-bottom: 25px;
-}
 
 .footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 0px 50px 90px 50px;
+}
+
+.footer__menu {
+    justify-self: end;
 }
 
 .footer__menu-list {
@@ -329,13 +349,13 @@
 
 .footer__menu-link_active {
     text-decoration: none;
+    pointer-events: none;
 }
 
 .footer__social-list {
     display: flex;
     list-style: none;
     justify-self: end;
-    max-width: 240px;
     gap: 48px;
 }
 
